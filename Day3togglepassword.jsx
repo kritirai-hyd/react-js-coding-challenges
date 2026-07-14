@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Day3togglepassword = () => {
+  const [toggle, setToggle] = useState("");
+
   return (
-    <div>Day3togglepassword</div>
+    <>
+      <input type={toggle ? "text" : "password"} />
+      <button onClick={() => setToggle(!toggle)}>{toggle ? "Hide Password" : "Show Password"}</button>
+    </>
   )
 }
 
